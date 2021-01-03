@@ -1,0 +1,29 @@
+/* #name {
+    color: #cacaca;
+    font-size: 1.8em;
+    line-height: 1.7em;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+} */
+
+:root {
+  --main-bg-color: #b3a369;
+  --main-fg-color: #e5e5e5;
+  --main-accent-color: #003057;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--main-accent-color);
+  font-family: "Playfair Display", serif;
+}
+
+.front-main {
+  color: var(--main-bg-color);
+  font-size: 1.8em;
+}
