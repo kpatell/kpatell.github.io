@@ -5,27 +5,36 @@
         <title>Krishan Patel</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap">
         <link rel="icon" href="images/favicon-logo.png"/>
     </head>
     <body>
         <header>
             <div class="navbar">
-                <img id="navbar-logo" src="images/favicon-logo.png" alt="Krishan Patel logo">
+                <a href="#intro-name"><img id="navbar-logo" src="images/favicon-logo.png" alt="Krishan Patel logo"></a>
 
                 <nav>
                     <ul>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#intro-name">About</a></li>
                         <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Resume</a></li>
+                        <li><a target="_blank" href="resume.pdf">Resume</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <div class="intro-container">
-            <h3 id="intro-name">Hello, my name is Krishan Patel.</h3>
+        <div class="about-container">
+            <h2 id="intro-name">Hello, my name is <span id="name">Krishan Patel.</span></h2>
+
+            <div class="summary-text">
+                <p id="i-am">I am...</p>
+                
+            </div>
+        </div>
+
+        <div class="portfolio-container">
+            <h3 id="portfolio-text">Portfolio</h3>
         </div>
     </body>
 </html>

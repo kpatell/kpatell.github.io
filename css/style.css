@@ -83,8 +83,26 @@ nav ul li a:hover::before {
   width: 100%;
 }
 
-.intro-container {
+.about-container {
   color: var(--main-text-color);
   font-size: 2em;
+  text-align: center;
+}
+
+.summary-text {
+  font-size: 0.75em;
+  text-align: left;
+
+  margin: 10px;
+}
+
+#name {
+  color: var(--secondary-text-color);
+}
+
+.portfolio-container h3 {
+  color: var(--secondary-text-color);
+  background-color: var(--main-fg-color);
+  font-size: 1.75em;
   text-align: center;
 }
