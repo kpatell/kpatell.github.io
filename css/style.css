@@ -110,7 +110,7 @@ nav ul li a:hover::before {
   z-index: -1;
 
   width: auto;
-  opacity: 0.75;
+  opacity: 1;
   /* animation: fade-in 2s ease-in-out forwards 0s; */
 }
 
