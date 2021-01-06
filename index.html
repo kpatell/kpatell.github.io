@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Krishan Patel</title>
+
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap">
@@ -11,12 +12,12 @@
     <body>
         <header>
             <div class="navbar">
-                <a href="#top"><img id="navbar-logo" src="images/favicon-logo.png" alt="Krishan Patel logo"></a>
+                <a href="#about"><img id="navbar-logo" src="images/logo-animation.gif" alt="Krishan Patel logo"></a>
 
                 <nav>
                     <ul>
-                        <li><a href="#top">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a target="_blank" href="resume.pdf">Resume</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -24,9 +25,12 @@
             </div>
         </header>
 
-        <div class="about-container">
-            <img id="krishan-profile-image" src="images/profile-image.png" alt="Krishan Patel">
-            <h2 id="greeting"><span id="about">Hi</span>, I'm</h2>
+        <div id="about">
+            <div id="krishan-profile-image-container">
+                <img id="krishan-profile-image" src="images/profile-image.png" alt="Krishan Patel">
+            </div>
+
+            <h2 id="greeting"><span id="big-hi">Hi</span>, I'm</h2>
 
             <div class="about-text">
                 <ul id="summary-list">
@@ -40,5 +44,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- <div id=portfolio>
+            <h2 class="secondary-heading" id=portfolio-heading>Portfolio</h2>
+        </div> -->
     </body>
 </html>

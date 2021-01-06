@@ -37,9 +37,9 @@ header::after {
 }
 
 #navbar-logo {
-  width: 55px;
+  width: 3vw;
   float: left;
-  padding: 10px 0px;
+  padding: 0.75vw 0vw;
 }
 
 nav {
@@ -54,8 +54,9 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-left: 70px;
-  padding-top: 27px;
+  /* margin-left: 70px; */
+  margin-left: 4.2vw;
+  padding-top: 3vh;
 
   position: relative;
 }
@@ -64,7 +65,7 @@ nav ul li a {
   color: var(--main-bg-color);
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 0.95vmax;
 }
 
 nav ul li a:hover {
@@ -74,7 +75,7 @@ nav ul li a:hover {
 nav ul li a::before {
   content: "";
   display: block;
-  height: 5px;
+  height: 0.5vh;
   background-color: var(--main-bg-color);
 
   position: absolute;
@@ -88,66 +89,89 @@ nav ul li a:hover::before {
   width: 100%;
 }
 
-.about-container {
+#about {
   color: var(--main-text-color);
-  font-size: 2.2em;
+  font-size: 2.1vw;
   text-align: left;
-  margin-left: 2em;
-  margin-top: 3.25em;
+
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 7vw;
+  padding-top: 9vh;
+
   text-transform: uppercase;
 }
 
-#about {
-  font-size: 3.5em;
-  letter-spacing: 0px;
+#big-hi {
+  font-size: 11vw;
+  letter-spacing: 0;
+}
+
+#krishan-profile-image-container {
+  transform-origin: right bottom;
+  position: absolute;
+  bottom: -40.5vh;
+  right: -25vw;
+
+  z-index: -1;
 }
 
 #krishan-profile-image {
-  position: absolute;
-  margin-top: -200px;
-  right: -415px;
-  bottom: -360px;
-  z-index: -1;
-
   width: auto;
+  height: 158vmin;
   opacity: 1;
   /* animation: fade-in 2s ease-in-out forwards 0s; */
 }
 
-.about-container .about-text #summary-list .red-text {
+#about .about-text #summary-list .red-text {
   color: var(--secondary-text-color);
   font-weight: 900;
   font-style: italic;
 }
 
 #summary-list {
-  font-size: 1em;
+  font-size: 2.07vw;
   font-weight: 100;
   text-align: left;
-  line-height: 2.25em;
+  line-height: 9vh;
 
-  margin-left: 100px;
+  margin-top: -2.5vh;
+  margin-left: 6vw;
   width: 60%;
 }
 
 .about-name-container {
   position: absolute;
-  bottom: 0em;
+  bottom: 0;
   right: 0;
   width: 100%;
 
   background-color: rgba(192, 159, 128, 0.5);
   text-transform: lowercase;
-  line-height: 0em;
+  line-height: 0;
 }
 
 #about-name {
-  font-size: 2.5em;
+  font-size: 9.6vh;
   float: right;
-  margin-right: 30px;
+  margin-right: 2vw;
 }
 
 #name {
   color: var(--secondary-text-color);
   font-weight: bolder;
 }
+
+/* h2.secondary-heading {
+  color: var(--secondary-text-color);
+  font-size: 4vw;
+  text-align: center;
+}
+
+#portfolio {
+  background-color: var(--main-fg-color);
+  margin-left: 0;
+  margin-top: 24.3vh;
+  padding-left: 7vw;
+  padding-top: 0.1vh;
+} */
