@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter bg-white text-black dark:bg-black dark:text-white;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* View Transition CSS for theme toggle animation */
+::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 999;
+  mix-blend-mode: normal;
+  animation: reveal 0.5s ease-out forwards;
+  clip-path: circle(0% at var(--x) var(--y));
+}
+
+@keyframes reveal {
+  to {
+    clip-path: circle(var(--r) at var(--x) var(--y));
+  }
+}
