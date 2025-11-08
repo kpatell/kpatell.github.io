@@ -4,7 +4,7 @@ import type { DecryptTextProps } from '@/types';
 
 export function DecryptText({ text, className = '', duration = 1000 }: DecryptTextProps) {
   const [displayedText, setDisplayedText] = useState(text.replace(/./g, '\u00A0'));
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const chars =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]{}|;:,.<>/?';
 
@@ -36,7 +36,7 @@ export function DecryptText({ text, className = '', duration = 1000 }: DecryptTe
 
       const newText = text
         .split('')
-        .map((letter, index) => {
+        .map((_, index) => {
           if (revealedIndicesRef.current.has(index)) {
             return text[index];
           }
