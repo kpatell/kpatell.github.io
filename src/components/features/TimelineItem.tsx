@@ -47,11 +47,14 @@ export function TimelineItem({ icon, title, subtitle, date, children, side }: Ti
       {/* Connector Dot with Logo */}
       <div
         className={cn(
-          'absolute top-8 h-12 w-12 rounded-full z-10',
+          'absolute h-12 w-12 rounded-full z-10',
           'flex items-center justify-center',
           'bg-white dark:bg-black border-2 border-black dark:border-white',
-          'left-1/2 -translate-x-1/2',
-          'shadow-lg'
+          'shadow-lg',
+          // Mobile: position on left side
+          'left-4 top-8',
+          // Desktop: position in center
+          'md:left-1/2 md:-translate-x-1/2'
         )}
       >
         <div className="w-7 h-7 flex items-center justify-center">
@@ -60,7 +63,13 @@ export function TimelineItem({ icon, title, subtitle, date, children, side }: Ti
       </div>
 
       {/* Content Half */}
-      <div className="w-full md:w-1/2 px-4 py-4">
+      <div className={cn(
+        'w-full md:w-1/2 py-4',
+        // Mobile: add left margin to avoid circle overlap
+        'ml-20 mr-4',
+        // Desktop: normal padding
+        'md:ml-0 md:mr-0 md:px-4'
+      )}>
         <div
           className={cn(
             'w-full bg-white/50 dark:bg-black/50 backdrop-blur-md',

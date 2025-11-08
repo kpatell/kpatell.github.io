@@ -77,11 +77,11 @@ export function AboutSection() {
         {/* Timeline */}
         <div ref={timelineRef} className="relative w-full flex flex-col items-center">
           {/* Background Line */}
-          <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-gray-200 dark:bg-gray-800 rounded-full" />
+          <div className="absolute top-0 h-full w-1 bg-gray-200 dark:bg-gray-800 rounded-full left-[2.5rem] md:left-1/2 md:-translate-x-1/2" />
           
           {/* Animated Fill Line */}
           <div 
-            className="absolute left-1/2 top-0 w-1 -translate-x-1/2 bg-black dark:bg-white rounded-full transition-all duration-300 ease-out"
+            className="absolute top-0 w-1 bg-black dark:bg-white rounded-full transition-all duration-300 ease-out left-[2.5rem] md:left-1/2 md:-translate-x-1/2"
             style={{ height: `${fillHeight}%` }}
           />
 
