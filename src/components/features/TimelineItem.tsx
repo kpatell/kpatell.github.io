@@ -49,7 +49,7 @@ export function TimelineItem({ icon, title, subtitle, date, children, side }: Ti
         className={cn(
           'absolute h-12 w-12 rounded-full z-10',
           'flex items-center justify-center',
-          'bg-white dark:bg-black border-2 border-black dark:border-white',
+          'bg-white dark:bg-white border-2 border-black dark:border-white',
           'shadow-lg',
           // Mobile: position on left side
           'left-4 top-8',
@@ -57,7 +57,7 @@ export function TimelineItem({ icon, title, subtitle, date, children, side }: Ti
           'md:left-1/2 md:-translate-x-1/2'
         )}
       >
-        <div className="w-7 h-7 flex items-center justify-center">
+        <div className="w-8 h-8 flex items-center justify-center p-1 rounded-full bg-white">
           {icon}
         </div>
       </div>
@@ -65,16 +65,16 @@ export function TimelineItem({ icon, title, subtitle, date, children, side }: Ti
       {/* Content Half */}
       <div className={cn(
         'w-full md:w-1/2 py-4',
-        // Mobile: add left margin to avoid circle overlap
-        'ml-20 mr-4',
+        // Mobile: add left margin to avoid circle overlap, reduce right margin
+        'ml-20 mr-2 pr-2',
         // Desktop: normal padding
-        'md:ml-0 md:mr-0 md:px-4'
+        'md:ml-0 md:mr-0 md:px-4 md:pr-4'
       )}>
         <div
           className={cn(
             'w-full bg-white/50 dark:bg-black/50 backdrop-blur-md',
             'border border-black/10 dark:border-white/10',
-            'p-6 rounded-lg shadow-lg shadow-black/5 dark:shadow-white/5'
+            'p-4 md:p-6 rounded-lg shadow-lg shadow-black/5 dark:shadow-white/5'
           )}
         >
           <div
