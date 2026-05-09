@@ -2,7 +2,7 @@ import { Download } from 'lucide-react';
 import { ThemeProvider } from '@/hooks/useTheme';
 import { StarBorder } from '@/components/ui';
 import { Navbar, ThemeToggle } from '@/components/layout';
-import { HeroSection, AboutSection, AiAssistantSection, ContactSection } from '@/components/sections';
+import { HeroSection, AboutSection, ProjectsSection, ContactSection } from '@/components/sections';
 
 function AppContent() {
   const resumeUrl = '/KrishanPatel-Resume.pdf';
@@ -40,7 +40,7 @@ function AppContent() {
       <main className="pb-16 md:pb-0 md:pl-24">
         <HeroSection />
         <AboutSection />
-        <AiAssistantSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
 

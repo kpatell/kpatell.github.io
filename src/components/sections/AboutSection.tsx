@@ -2,6 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import { TimelineItem } from '@/components/features';
 import type { TimelineData } from '@/types';
 
+const techStack = [
+  'React', 'TypeScript', 'Python', 'AWS', 'Supabase', 'PostgreSQL',
+  'Node.js', 'Vite', 'TailwindCSS', 'Framer Motion', 'Zustand', 'REST APIs',
+];
+
 export function AboutSection() {
   const [fillHeight, setFillHeight] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -32,12 +37,30 @@ export function AboutSection() {
       ),
       title: 'capital one',
       subtitle: 'senior associate software engineer',
-      date: 'aug 2023 - present',
-      content: undefined,
+      date: 'aug 2023 - apr 2026',
+      content: (
+        <span>
+          led the development of AI-driven qualification tools and enterprise-scale fintech infrastructure, driving operational efficiency through ML automation and standardized CI/CD practices.
+        </span>
+      ),
+    },
+    {
+      icon: (
+        <img
+          src="/google-logo.svg"
+          alt="Google Logo"
+          className="w-full h-full object-contain"
+        />
+      ),
+      title: 'google',
+      subtitle: 'software engineer | google ads',
+      date: 'may 2026 - present',
+      content: (
+        <span>authorized buyers platform</span>
+      ),
     },
   ];
 
-  // Timeline fill animation on scroll
   useEffect(() => {
     const handleScroll = () => {
       if (!timelineRef.current) return;
@@ -47,7 +70,6 @@ export function AboutSection() {
       const scrollPosition = window.scrollY + window.innerHeight;
       const viewportHeight = window.innerHeight;
 
-      // Calculate how much of the timeline is visible
       const startFilling = timelineTop + viewportHeight * 0.3;
       const endFilling = timelineTop + timelineHeight;
 
@@ -62,7 +84,7 @@ export function AboutSection() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -78,14 +100,13 @@ export function AboutSection() {
         <div ref={timelineRef} className="relative w-full flex flex-col items-center">
           {/* Background Line */}
           <div className="absolute top-0 h-full w-1 bg-gray-200 dark:bg-gray-800 rounded-full left-[2.5rem] md:left-1/2 md:-translate-x-1/2" />
-          
+
           {/* Animated Fill Line */}
-          <div 
+          <div
             className="absolute top-0 w-1 bg-black dark:bg-white rounded-full transition-all duration-300 ease-out left-[2.5rem] md:left-1/2 md:-translate-x-1/2"
             style={{ height: `${fillHeight}%` }}
           />
 
-          {/* Timeline Items Container */}
           {timelineData.map((item, index) => (
             <TimelineItem
               key={index}
@@ -98,6 +119,23 @@ export function AboutSection() {
               {item.content}
             </TimelineItem>
           ))}
+        </div>
+
+        {/* Tech Stack */}
+        <div className="mt-16">
+          <h3 className="text-center text-2xl font-bold text-black dark:text-white mb-8">
+            core technologies
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {techStack.map((tech) => (
+              <span
+                key={tech}
+                className="px-4 py-2 rounded-full border border-black/20 dark:border-white/20 text-sm font-medium text-black dark:text-white bg-white/50 dark:bg-black/50"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

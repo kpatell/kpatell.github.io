@@ -9,10 +9,13 @@ export function ContactSection() {
         <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6">
           contact
         </h2>
-        
+
+        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-2">
+          want to talk about something interesting? let's chat.
+        </p>
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
-          feel free to contact me at{' '}
-          <a 
+          reach me at{' '}
+          <a
             href={`mailto:${myEmail}`}
             className="text-black dark:text-white font-medium hover:underline underline-offset-4"
           >
