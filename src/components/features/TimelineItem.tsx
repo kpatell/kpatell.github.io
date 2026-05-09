@@ -64,7 +64,7 @@ export function TimelineItem({ icon, title, subtitle, date, children, side }: Ti
 
       {/* Content Half */}
       <div className={cn(
-        'w-full md:w-1/2 py-4',
+        'w-full md:w-1/2 py-4 min-w-0',
         // Mobile: add left margin to avoid circle overlap, reduce right margin
         'ml-20 mr-2 pr-2',
         // Desktop: normal padding
@@ -93,7 +93,7 @@ export function TimelineItem({ icon, title, subtitle, date, children, side }: Ti
             </time>
             <h3
               className={cn(
-                'text-xl font-semibold text-black dark:text-white mt-1',
+                'text-xl font-semibold text-black dark:text-white mt-1 break-words',
                 isRight ? '' : 'md:text-right'
               )}
             >

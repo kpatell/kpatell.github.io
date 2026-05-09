@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Home, User, Mail, Sparkles } from 'lucide-react';
+import { Home, User, Mail, FolderOpen } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { NavItem } from '@/types';
 
@@ -9,7 +9,7 @@ export function Navbar() {
   const navItems: NavItem[] = [
     { name: 'home', id: 'home', icon: Home },
     { name: 'about', id: 'about', icon: User },
-    { name: 'learn more using ai!', id: 'learn-more-ai', icon: Sparkles, tooltip: 'try me!' },
+    { name: 'projects', id: 'projects', icon: FolderOpen },
     { name: 'contact', id: 'contact', icon: Mail },
   ];
 
