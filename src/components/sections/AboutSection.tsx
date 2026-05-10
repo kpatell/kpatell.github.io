@@ -5,6 +5,8 @@ import type { TimelineData } from '@/types';
 const techStack = [
   'React', 'TypeScript', 'Python', 'AWS', 'Supabase', 'PostgreSQL',
   'Node.js', 'Vite', 'TailwindCSS', 'Framer Motion', 'Zustand', 'REST APIs',
+  'Docker', 'Kubernetes', 'Java', 'NoSQL/MongoDB', 'Flask',
+  'Figma', 'React Native', 'CI/CD', 'Linux', 'Claude'
 ];
 
 export function AboutSection() {
