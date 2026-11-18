@@ -2,8 +2,12 @@ You are a subagent working on task `<task-id>` of the `<feature>` plan in this r
 
 ## Setup
 1. `git switch -c <feature>/<task-id> <feature>` (fork from the integration branch).
-2. Read `AGENTS.md`, `.agents/plans/<feature>.md`, and — for UI work — the
-   `apple-google-design-kit` skill.
+2. Read `AGENTS.md` and `.agents/skills/apple-google-design-kit/SKILL.md`. Do NOT read unrelated
+   sections or explore the whole repo — use only the contracts below.
+
+## Contracts (pre-digested)
+- Types & data: `<exact files/exports>`
+- UI primitives available from `@/components/ui`: `<exact component names + key props>`
 
 ## Task
 <what to build, in concrete terms>

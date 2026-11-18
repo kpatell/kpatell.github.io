@@ -31,6 +31,22 @@ Write `.agents/plans/<feature>.md` using [plan-template.md](./resources/plan-tem
   *read* but not edit, dependencies, acceptance criteria.
 - **Waves** — tasks in the same wave must have non-overlapping file scopes.
 
+### Token & cost efficiency rules
+
+Each subagent cold-starts with full system/rules context and runs its own build check. Minimize
+spawn overhead:
+
+- **Coarse-grained batching (2–3 subagents max per wave)**: Bundle related sections/components into
+  2–3 substantial tracks (4+ files each) instead of 1-file micro-tasks. If a task is < 3 files, fold
+  it into a larger track or do it in the orchestrator.
+- **Model tiering**: Pass `Model: "flash"` to `invoke_subagent` for well-scoped implementation tasks
+  where Wave 0 already locked down types, tokens, and UI primitives. Reserve the primary model for
+  orchestration, Wave 0 contracts, and Wave 2 review/integration.
+- **Pre-digest context in the brief**: Include exact prop signatures, file paths, and token cheat
+  sheets in the brief so subagents don't burn turns grepping or reading unrelated files.
+- **Real data in Wave 0**: When user content is already known, put it in `src/data/` in Wave 0 so
+  Wave 2 doesn't rewrite data twice.
+
 ### Conflict rules (the important part)
 
 - Two tasks in the same wave may **never** share a writable file.
@@ -45,6 +61,8 @@ Write `.agents/plans/<feature>.md` using [plan-template.md](./resources/plan-tem
 For each task in the current wave, call `invoke_subagent` in parallel (one call block):
 
 - `TypeName`: `self`
+- `Model`: `flash` for bounded UI/feature implementation after Wave 0; `inherit` only for complex
+  architectural or ambiguous tasks.
 - `Workspace`: `share` (own worktree on the same repo — branches it creates are immediately
   visible to you for merging). Use `branch` only if `share` is unavailable; then ask the subagent to
   report its final commit SHA and workspace path so you can `git fetch` from it.

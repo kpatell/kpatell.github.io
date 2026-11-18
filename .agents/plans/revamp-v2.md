@@ -1,7 +1,7 @@
 # Plan: revamp-v2
 
 Integration branch: `revamp-v2`
-Status: draft — needs user content input (see "Open inputs") before Wave 1
+Status: approved-content — ready for Wave 0
 
 ## Goal
 Replace the current terminal/particles aesthetic with an Apple × Material 3 design: hero, bento grid
@@ -12,34 +12,40 @@ Gemini "company fit" assistant but restyle it.
 - No backend, CMS, or router. Single page, static, GitHub Pages.
 - No blog (can be a later plan).
 
-## Open inputs (user)
-- NYC cards: neighborhood, favorite spots (coffee / food / running route), photo(s).
-- Hobbies to feature and any "currently" items (reading / listening / building).
-- Which projects to feature (2–4) with one-line impact each.
+## Content inputs (confirmed)
+- **NYC (`src/data/nyc.ts`)**:
+  - Neighborhood: Chelsea, NYC
+  - Running: Central Park loops, occasional West Side Highway runs
+  - Guilty pleasure food: Taco Bell on 23rd & 6th
+- **Currently (`src/data/now.ts`)**:
+  - Figuring out next project; actively building a dev AI workflow
+- **Projects (`src/data/projects.ts`)**:
+  - `generations` (`https://github.com/kpatell/generations`) — connecting family (grandma has 10 siblings) so everyone can keep track of who is who at reunions
+  - `reds` (`https://github.com/kpatell/reds`) — multiplayer game built to play with college friends and stay in touch
+  - `costume-creator` (`https://github.com/kpatell/costume-creator`) — SVG color editor for college Raas costumes to preview how guys' and girls' outfits look on stage
 
 ## Wave 0 — Shared contracts (orchestrator, sequential)
 - [x] `framer-motion` dependency
 - [ ] Design tokens + Inter variable font in `tailwind.config.js` / `index.html` / `src/styles/index.css`
-- [ ] Types: `src/types/content.ts` (Profile, Project, Experience, NycSpot, Hobby, NowItem)
-- [ ] Stub data files in `src/data/` with placeholder content matching the types
+- [ ] Types: `src/types/content.ts` (Profile, Project, Experience, NycSpot, NowItem)
+- [ ] Populated data files in `src/data/` (`profile.ts`, `projects.ts`, `experience.ts`, `nyc.ts`, `now.ts`) using confirmed content above
 - [ ] UI primitives in `src/components/ui/`: `Surface`, `BentoCard`, `Pill`, `SectionHeader`, `SegmentedControl`
 - [ ] Barrel exports updated
 
-## Wave 1 — Parallel tasks
+## Wave 1 — Parallel tasks (2 coarse-grained tracks, `Model: "flash"`)
+
+Consolidated from 5 micro-tasks to 2 tracks to cut subagent cold-start tokens and build runs by 60%.
 
 | id | summary | writable scope (exclusive) | read-only refs |
 |----|---------|----------------------------|----------------|
-| hero | Hero v2: name, tagline, NYC local-time "status" pill, action pills | `src/components/sections/HeroV2.tsx`, `src/components/features/NycClock.tsx` | `src/data/profile.ts`, ui/* |
-| bento | Bento grid + cards (projects, NYC, now-playing/reading, stack, photo) | `src/components/bento/**`, `src/components/sections/BentoSection.tsx` | `src/data/*`, ui/* |
-| experience | Minimal expandable timeline | `src/components/sections/ExperienceV2.tsx`, `src/components/features/TimelineRow.tsx` | `src/data/experience.ts`, ui/* |
-| chrome | Glass top nav (replaces left sidebar), theme toggle restyle, footer, contact | `src/components/layout/GlassNav.tsx`, `src/components/layout/Footer.tsx`, `src/components/sections/ContactV2.tsx` | ui/* |
-| ai | Restyle Gemini assistant as a bento card / sheet | `src/components/features/FitAssistant.tsx` | `src/lib/api.ts`, ui/* |
+| frame-hero | Glass top nav, theme toggle restyle, footer, Hero v2 with NYC local-time pill, Contact v2 | `src/components/layout/GlassNav.tsx`, `src/components/layout/Footer.tsx`, `src/components/sections/HeroV2.tsx`, `src/components/features/NycClock.tsx`, `src/components/sections/ContactV2.tsx` | `src/data/profile.ts`, `src/components/ui/*` |
+| bento-exp | Bento grid & cards (projects, NYC Chelsea/running/Taco Bell, currently/AI workflow, stack), expandable experience timeline, restyled Gemini fit assistant | `src/components/bento/**`, `src/components/sections/BentoSection.tsx`, `src/components/sections/ExperienceV2.tsx`, `src/components/features/TimelineRow.tsx`, `src/components/features/FitAssistant.tsx` | `src/data/*`, `src/lib/api.ts`, `src/components/ui/*` |
 
 ## Wave 2 — Integration (orchestrator)
 - [ ] Swap sections in `src/App.tsx`
 - [ ] Delete `ParticlesBackground`, `DecryptText`, `StarBorder`, old sections
-- [ ] Replace placeholder data with real content
-- [ ] Full `AG_VALIDATION_RULES.md` pass, responsive + dark/light check
+- [ ] Full `AG_VALIDATION_RULES.md` pass, responsive (375px / 768px / 1280px+) + dark/light check
 
 ## Log
 - 2026-10-25: plan drafted; Phase 1 scaffolding (AGENTS.md, skills, validation rules) done.
+- 2026-11-17: added user content (Chelsea/Central Park/WSH/Taco Bell, dev AI workflow, generations/reds/costume-creator) and consolidated Wave 1 from 5 subagents to 2 `flash` tracks for token efficiency.
