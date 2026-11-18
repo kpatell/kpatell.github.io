@@ -1,7 +1,7 @@
 # Plan: revamp-v2
 
 Integration branch: `revamp-v2`
-Status: approved-content — ready for Wave 0
+Status: wave-1-complete — ready for Wave 2 integration
 
 ## Goal
 Replace the current terminal/particles aesthetic with an Apple × Material 3 design: hero, bento grid
@@ -26,11 +26,11 @@ Gemini "company fit" assistant but restyle it.
 
 ## Wave 0 — Shared contracts (orchestrator, sequential)
 - [x] `framer-motion` dependency
-- [ ] Design tokens + Inter variable font in `tailwind.config.js` / `index.html` / `src/styles/index.css`
-- [ ] Types: `src/types/content.ts` (Profile, Project, Experience, NycSpot, NowItem)
-- [ ] Populated data files in `src/data/` (`profile.ts`, `projects.ts`, `experience.ts`, `nyc.ts`, `now.ts`) using confirmed content above
-- [ ] UI primitives in `src/components/ui/`: `Surface`, `BentoCard`, `Pill`, `SectionHeader`, `SegmentedControl`
-- [ ] Barrel exports updated
+- [x] Design tokens + Inter variable font in `tailwind.config.js` / `index.html` / `src/styles/index.css`
+- [x] Types: `src/types/content.ts` (Profile, Project, Experience, NycSpot, NowItem)
+- [x] Populated data files in `src/data/` (`profile.ts`, `projects.ts`, `experience.ts`, `nyc.ts`, `now.ts`) using confirmed content above
+- [x] UI primitives in `src/components/ui/`: `Surface`, `BentoCard`, `Pill`, `SectionHeader`, `SegmentedControl`
+- [x] Barrel exports updated
 
 ## Wave 1 — Parallel tasks (2 coarse-grained tracks, `Model: "flash"`)
 
@@ -49,3 +49,4 @@ Consolidated from 5 micro-tasks to 2 tracks to cut subagent cold-start tokens an
 ## Log
 - 2026-10-25: plan drafted; Phase 1 scaffolding (AGENTS.md, skills, validation rules) done.
 - 2026-11-17: added user content (Chelsea/Central Park/WSH/Taco Bell, dev AI workflow, generations/reds/costume-creator) and consolidated Wave 1 from 5 subagents to 2 `flash` tracks for token efficiency.
+- 2026-11-17: Wave 0 & Wave 1 (`frame-hero`, `bento-exp`) completed and merged into `revamp-v2`.
