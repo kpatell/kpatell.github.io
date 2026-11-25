@@ -16,10 +16,10 @@ export function NowBento() {
     <BentoCard colSpan={1} delay={0.24}>
       <div>
         <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-          Currently
+          Lately
         </p>
         <h3 className="mt-1 text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-          In progress
+          What I'm up to
         </h3>
 
         <ul className="mt-5 space-y-4">

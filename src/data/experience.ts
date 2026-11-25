@@ -4,7 +4,7 @@ export const experiences: Experience[] = [
   {
     id: 'google',
     company: 'Google',
-    role: 'Software Engineer — Google Ads',
+    role: 'Software Engineer, Google Ads',
     period: 'May 2026 – Present',
     location: 'New York, NY',
     logo: '/google-logo.svg',
