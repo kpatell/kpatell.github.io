@@ -66,7 +66,7 @@ export function NycBento() {
 
         <figure className="relative overflow-hidden rounded-2xl border border-zinc-900/10 dark:border-white/10 bg-zinc-900/5 dark:bg-white/5 min-h-64">
           <img
-            src="/post-jersey-city-marathon.jpg"
+            src="/post-jersey-city-marathon.png"
             alt="Krishan smiling with post-race snacks after the Jersey City Half Marathon"
             className="h-full w-full object-cover object-top"
           />
