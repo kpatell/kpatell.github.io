@@ -3,7 +3,6 @@ import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useReducedMotion } from 'framer-motion';
 import { useTheme } from '@/hooks/useTheme';
 import { cn } from '@/lib/utils';
-import { profile } from '@/data';
 
 const navLinks = [
   { label: 'Work & Life', href: '#bento' },
@@ -64,13 +63,18 @@ export function GlassNav() {
         >
           <a
             href="#home"
+            aria-label="Krishan Patel — Home"
             className={cn(
-              'inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold tracking-tight',
-              'text-zinc-900 dark:text-zinc-50 hover:text-blue-600 dark:hover:text-blue-400 transition-colors',
+              'inline-flex min-h-11 min-w-11 items-center justify-center rounded-full p-1.5',
+              'hover:bg-zinc-900/5 dark:hover:bg-white/10 transition-colors',
               focusRing
             )}
           >
-            {profile.name}
+            <img
+              src="/favicon.svg"
+              alt="KP"
+              className="h-8 w-8 rounded-full"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-1">
