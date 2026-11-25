@@ -19,11 +19,11 @@ export function ContactV2() {
   const animateInView = prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 };
 
   return (
-    <section id="contact" className="py-24 md:py-32 max-w-6xl mx-auto px-6">
+    <section id="contact" className="py-16 md:py-24 max-w-6xl mx-auto px-6">
       <SectionHeader
         eyebrow="Contact"
-        title="Let's talk."
-        description="Always down to chat about distributed systems, AI tooling, or the best slice in Chelsea."
+        title="Say hey"
+        description="Down to talk shop, side projects, or grab a slice in Chelsea."
       />
 
       <motion.div
@@ -35,7 +35,7 @@ export function ContactV2() {
         <Surface padding="lg" className="flex flex-col gap-6">
           <div className="flex flex-col gap-1">
             <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-              Direct line
+              Email
             </p>
             <p className="text-xl md:text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 break-all">
               {profile.email}

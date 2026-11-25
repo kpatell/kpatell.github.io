@@ -63,7 +63,7 @@ export function GlassNav() {
         >
           <a
             href="#home"
-            aria-label="Krishan Patel — Home"
+            aria-label="Krishan Patel, Home"
             className={cn(
               'inline-flex min-h-11 min-w-11 items-center justify-center rounded-full p-1.5',
               'hover:bg-zinc-900/5 dark:hover:bg-white/10 transition-colors',

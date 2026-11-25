@@ -7,18 +7,17 @@ import { SectionHeader } from '@/components/ui';
  */
 export function ExperienceV2() {
   return (
-    <section id="experience" className="py-24 md:py-32 max-w-6xl mx-auto px-6">
+    <section id="experience" className="py-16 md:py-24 max-w-6xl mx-auto px-6">
       <SectionHeader
         eyebrow="Experience"
-        title="Where I've worked."
+        title="Where I've worked"
       />
 
       <div className="space-y-4">
-        {experiences.map((exp, index) => (
+        {experiences.map((exp) => (
           <TimelineRow
             key={exp.id}
             experience={exp}
-            defaultExpanded={index === 0}
           />
         ))}
       </div>

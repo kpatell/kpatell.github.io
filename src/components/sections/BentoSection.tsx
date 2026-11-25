@@ -27,11 +27,11 @@ export function BentoSection() {
   const showLife = filter === 'all' || filter === 'life';
 
   return (
-    <section id="bento" className="py-24 md:py-32 max-w-6xl mx-auto px-6">
+    <section id="bento" className="py-16 md:py-24 max-w-6xl mx-auto px-6">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-12">
         <SectionHeader
           eyebrow="Work & Life"
-          title="Things I'm building and living."
+          title="Projects & life lately"
           className="mb-0 md:mb-0"
         />
         <SegmentedControl
