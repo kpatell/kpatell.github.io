@@ -92,7 +92,7 @@ export function HeroV2() {
           <div className="rounded-3xl p-2 bg-white/70 dark:bg-zinc-900/60 backdrop-blur-xl border border-zinc-900/10 dark:border-white/10">
             {/* Shift crop down past sky to center subject in frame */}
             <img
-              src="/relaxed-normal.JPG"
+              src="/relaxed-normal.png"
               alt="Krishan Patel sitting outdoors on the grass at sunset"
               className="h-80 sm:h-96 w-full rounded-2xl object-cover object-[50%_70%]"
             />

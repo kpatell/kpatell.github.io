@@ -13,6 +13,8 @@ export const profile: Profile = {
   linkedin: 'https://www.linkedin.com/in/krishanpatell/',
   resumeUrl: '/KrishanPatel-Resume.pdf',
   stack: [
+    'Java',
+    'Dart',
     'TypeScript',
     'React',
     'Python',
@@ -22,7 +24,6 @@ export const profile: Profile = {
     'Docker',
     'Kubernetes',
     'Node.js',
-    'Java',
     'TailwindCSS',
     'Framer Motion',
   ],
