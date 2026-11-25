@@ -4,6 +4,7 @@ export type {
   Profile,
   Project,
   Experience,
+  ExperienceLink,
   NycCategory,
   NycSpot,
   NowItem,

@@ -22,6 +22,11 @@ export interface Project {
   highlight?: string;
 }
 
+export interface ExperienceLink {
+  label: string;
+  url: string;
+}
+
 export interface Experience {
   id: string;
   company: string;
@@ -33,6 +38,7 @@ export interface Experience {
   summary: string;
   highlights: string[];
   tags: string[];
+  links?: ExperienceLink[];
 }
 
 export type NycCategory = 'neighborhood' | 'running' | 'food';

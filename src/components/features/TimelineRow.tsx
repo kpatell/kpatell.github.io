@@ -1,6 +1,6 @@
 import { useId, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Play } from 'lucide-react';
 import type { Experience } from '@/types';
 import { Pill, Surface } from '@/components/ui';
 import { cn } from '@/lib/utils';
@@ -112,7 +112,19 @@ export function TimelineRow({ experience, defaultExpanded = false }: TimelineRow
                 ))}
               </ul>
 
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-5 flex flex-wrap items-center gap-2">
+                {experience.links?.map((link) => (
+                  <Pill
+                    key={link.url}
+                    href={link.url}
+                    external
+                    size="sm"
+                    variant="glass"
+                    icon={<Play className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" aria-hidden="true" />}
+                  >
+                    {link.label}
+                  </Pill>
+                ))}
                 {experience.tags.map((tag) => (
                   <Pill key={tag} size="sm" variant="neutral">
                     {tag}

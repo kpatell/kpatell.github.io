@@ -5,7 +5,7 @@ export const nycSpots: NycSpot[] = [
     id: 'chelsea',
     label: 'Home base',
     place: 'Chelsea, NYC',
-    detail: 'Morning coffee walks, gallery blocks, and easy access to the Hudson.',
+    detail: 'Morning coffee walks, gallery blocks, and easy access to the Google office.',
     category: 'neighborhood',
   },
   {

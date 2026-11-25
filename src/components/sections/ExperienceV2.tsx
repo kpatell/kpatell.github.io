@@ -1,10 +1,9 @@
 import { experiences } from '@/data';
-import { FitAssistant } from '@/components/features/FitAssistant';
 import { TimelineRow } from '@/components/features/TimelineRow';
 import { SectionHeader } from '@/components/ui';
 
 /**
- * Experience section featuring an expandable timeline and the Gemini company-fit assistant.
+ * Experience section featuring an expandable timeline.
  */
 export function ExperienceV2() {
   return (
@@ -22,19 +21,6 @@ export function ExperienceV2() {
             defaultExpanded={index === 0}
           />
         ))}
-      </div>
-
-      <div className="mt-12 md:mt-16">
-        <div className="mb-5">
-          <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-            Company fit check
-          </h3>
-          <p className="mt-1 text-sm md:text-base text-zinc-500 dark:text-zinc-400">
-            See how my background maps to your team in three concise points.
-          </p>
-        </div>
-
-        <FitAssistant />
       </div>
     </section>
   );

@@ -46,5 +46,11 @@ export const experiences: Experience[] = [
       'Built an interactive JavaScript tutoring platform with MongoDB, React, and Node.js partnering with Atlanta middle schools.',
     ],
     tags: ['Intelligence', 'Devices', 'Ramblin’ Raas'],
+    links: [
+      {
+        label: 'Watch GT Ramblin’ Raas performance',
+        url: 'https://www.youtube.com/watch?v=QdFJlOgfd7A',
+      },
+    ],
   },
 ];
