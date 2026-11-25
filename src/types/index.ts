@@ -1,5 +1,15 @@
 import React from 'react';
 
+export type {
+  Profile,
+  Project,
+  Experience,
+  ExperienceLink,
+  NycCategory,
+  NycSpot,
+  NowItem,
+} from './content';
+
 // Button component props
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   as?: React.ElementType;

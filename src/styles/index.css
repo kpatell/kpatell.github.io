@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-inter bg-white text-black dark:bg-black dark:text-white;
-  }
-
   html {
     scroll-behavior: smooth;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  body {
+    @apply font-sans bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 antialiased selection:bg-blue-500/20 selection:text-blue-700 dark:selection:text-blue-300;
   }
 }
 
